@@ -94,7 +94,8 @@ bugsController.update = (req, res, next) => {
         res.locals.data = results.rows;
         next();
     })
-    .catch(err => next(err, req, res));
+    .catch(err => next(err, req, res))
+}
 //Update bug 2
 bugsController.updateBug = (req, res, next) => {
     const {bugId} = req.params;
@@ -144,11 +145,29 @@ bugsController.delete = (req, res, next) => {
 }
 
 //SET STATUS = RESOLVED 1
+bugsController.resolve = (req, res, next) => {
+    const {bugId, status} = req.body;
+
+    const sqlQuery = `update bugs set statur = ${status} where id = ${bugId} returning id, project_id, author, assigned_to, description, status`
+    db.query(sqlQuery)
+    .then(results => {
+        res.locals.data = results.rows;
+        next();
+    }).catch(err => next(err, req, res));
+}
 
 //SET STATUS = RESOLVED 2
+bugsController.resolveBug = (req, res, next) => {
+    const {bugId} = req.params;
+    const {status} = req.body;
 
+    const sqlQuery = `update bugs set status = ${status} where id = ${bugId} returning id, project_id, author, assigned_to, description, status`;
 
-
+    db.query(sqlQuery)
+    .then(results => {
+        res.locals.data = results.rows;
+        next();
+    }).catch(err => next(err, req, res));
 }
 
 module.exports = bugsController;
