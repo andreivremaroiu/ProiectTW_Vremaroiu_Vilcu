@@ -20,13 +20,13 @@ export default (props) => {
   ];
   return (
     <div className="container">
-      <ul>
+      <ul className="list-reset">
         {mockProjectDetailData.map((item) => {
           return (
-            <li className="flex">
-              <div>{item.bugId}</div>
-              <div>{item.description}</div>
-              <div>{item.status}</div>
+            <li className="py-2 flex border-b border-gray-300">
+              <div className="w-1/3 text-gray-600">{item.bugId}</div>
+              <div className="w-1/3 text-gray-600">{item.description}</div>
+              <div className="w-1/3 text-gray-600">{item.status}</div>
             </li>
           );
         })}
