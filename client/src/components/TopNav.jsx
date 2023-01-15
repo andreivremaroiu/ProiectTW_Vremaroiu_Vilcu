@@ -12,7 +12,7 @@ const TopNav = ({ logOut, ...props }) => {
       render={(props) => {
         return (
           <div className="shadow-md flex justify-between px-2">
-            <div className="text-indigo-500 text-3xl">Bug Tracking<p> made by Vrema and Fane</p></div>
+            <div className="text-indigo-500 text-3xl">Bug tracking by Vrema and Fane</div>
             <PrivateRoute
               {...props}
               component={(props) => {

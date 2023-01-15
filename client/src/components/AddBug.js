@@ -4,7 +4,6 @@ import { useSelector, useDispatch } from 'react-redux';
 import { createBug, getAllProjects } from '../reducers/bug';
 
 const AddBug = () => {
-  console.log('bug added');
   let validate = (value) => {
     let error;
     if (!value) error = 'required field';
@@ -106,7 +105,7 @@ const AddBug = () => {
                   as="select"
                   className="shadow appearance-none border rounded w-full bg-gray-200 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
                 >
-                  <option value="">Select a User</option>
+                  <option value="">Select an user</option>
 
                   {listOfProjects.map(
                     (value) =>
