@@ -1,18 +1,18 @@
 {
-  "name": "BugTracking",
+  "name": "bugtrackr",
   "version": "0.0.1",
-  "description": "",
+  "description": "Tracking bugs can be difficult, and important for production-grade applications. A bug tracker to squash those ‘em bugs.",
   "scripts": {
-    "test": ""
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/andreivremaroiu/ProiectTW_Vremaroiu_Vilcu.git"
+    "url": "git+https://github.com/BugTrackr/bugtrackr.git"
   },
   "keywords": [
     "bugs"
   ],
-  "author": "BugTracker",
+  "author": "BugTrackr",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/BugTrackr/bugtrackr/issues"
