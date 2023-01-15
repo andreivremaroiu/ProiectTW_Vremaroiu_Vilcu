@@ -10,8 +10,8 @@ export default () => {
   console.log('path', path);
   console.log('url', url);
   return (
-    <div className="w-full">
-      <div>This is the display section</div>
+    <div className="w-full bg-gray-200 rounded-lg p-4">
+      <div className="text-2xl font-bold text-center mb-4">This is the display section</div>
       <Switch>
         <Route
           path="/projects"
@@ -21,7 +21,7 @@ export default () => {
           path="/bugs"
           render={(props) => (
             <div>
-              <h2>Bug List</h2>
+              <h2 className="text-lg font-bold mb-2">Bug List</h2>
               <BugsList {...props} />
             </div>
           )}
@@ -30,7 +30,7 @@ export default () => {
           path="/createbug"
           render={() => (
             <div>
-              <h2>Create a new bug</h2>
+              <h2 className="text-lg font-bold mb-2">Create a new bug</h2>
               <AddBug />
             </div>
           )}
