@@ -19,14 +19,14 @@ export default (props) => {
     },
   ];
   return (
-    <div className="container">
+    <div className="container bg-white rounded-lg p-4">
       <ul className="list-reset">
         {mockProjectDetailData.map((item) => {
           return (
-            <li className="py-2 flex border-b border-gray-300">
-              <div className="w-1/3 text-gray-600">{item.bugId}</div>
-              <div className="w-1/3 text-gray-600">{item.description}</div>
-              <div className="w-1/3 text-gray-600">{item.status}</div>
+            <li className="py-2 flex items-center border-b border-gray-300 hover:bg-gray-200">
+              <div className="w-1/3 text-lg font-medium text-gray-800">{item.bugId}</div>
+              <div className="w-1/3 text-lg font-medium text-gray-800">{item.description}</div>
+              <div className="w-1/3 text-lg font-medium text-gray-800">{item.status}</div>
             </li>
           );
         })}

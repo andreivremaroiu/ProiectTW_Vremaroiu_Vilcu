@@ -33,6 +33,7 @@ export const ProjectList = ({ projects, history, fetchProjects }) => {
         {mockItemList.map((item) => {
           return (
             <ProjectListItem
+              className="hover:bg-gray-200"
               {...item}
               key={`${item.projectName}`}
               onClick={() => handleItemClick(item.id)}
