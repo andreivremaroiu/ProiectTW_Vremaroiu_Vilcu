@@ -3,34 +3,41 @@ import React from 'react';
 export default (props) => {
   const mockProjectDetailData = [
     {
-      bugId: 321,
-      description: 'a bug 1',
-      status: 'status',
+      bugId: 1,
+      description: 'primul bug',
+      status: 'solved',
     },
     {
-      bugId: 3212,
-      description: 'a bug 2',
-      status: 'status',
+      bugId: 2,
+      description: 'second bug',
+      status: 'unsolved',
     },
     {
-      bugId: 123,
-      description: 'a bug 3',
-      status: 'status',
+      bugId: 3,
+      description: 'what is this',
+      status: 'solved',
     },
   ];
   return (
-    <div className="container bg-white rounded-lg p-4">
-      <ul className="list-reset">
+    <table className="table-auto">
+    <thead>
+        <tr className="bg-gray-300">
+            <th className="px-4 py-2">ID</th>
+            <th className="px-4 py-2">Description</th>
+            <th className="px-4 py-2">Status</th>
+        </tr>
+    </thead>
+    <tbody>
         {mockProjectDetailData.map((item) => {
-          return (
-            <li className="py-2 flex items-center border-b border-gray-300 hover:bg-gray-200">
-              <div className="w-1/3 text-lg font-medium text-gray-800">{item.bugId}</div>
-              <div className="w-1/3 text-lg font-medium text-gray-800">{item.description}</div>
-              <div className="w-1/3 text-lg font-medium text-gray-800">{item.status}</div>
-            </li>
-          );
+            return (
+                <tr className="border-b border-gray-300 hover:bg-gray-200">
+                    <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.bugId}</td>
+                    <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.description}</td>
+                    <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.status}</td>
+                </tr>
+            );
         })}
-      </ul>
-    </div>
+    </tbody>
+</table>
   );
 };
