@@ -58,10 +58,12 @@ const AddBug = () => {
                   {/* {listOfProjects.map((value) => (
                     <option key={'project' + value.id} value={value.id}>
                       {value.name} */}
-                      {listOfProjects.forEach(project => (
+                      {/* {listOfProjects.forEach(project => (
                         <option value=""> {project}
                     </option>
-                  ))}
+                  ))} */}
+                  <option>1</option>
+                  <option>2</option>
                 </Field>
                 {errors.projectId && touched.projectId && (
                   <div>{errors.projectId}</div>
@@ -119,11 +121,7 @@ const AddBug = () => {
                           ${value.owner}
                         </option>`
                   )} */}
-                  {
-                    listOfProjects.forEach(project => (
-                      <option value="">{project}</option>
-                    ))
-                  }
+                  <option>1</option>
                 </Field>
 
                 {/* <option
