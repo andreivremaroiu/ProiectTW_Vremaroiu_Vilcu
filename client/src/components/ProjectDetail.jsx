@@ -20,30 +20,30 @@ export default (props) => {
   ];
   return (
     <div className="flex justify-center">
-  <div className="w-full max-w-md">
-    <h2 className="text-center text-2xl font-medium">BUG LIST</h2>
-    <table className="table-auto mx-auto">
-        <thead>
+      <div className="w-full max-w-md">
+        <h2 className="text-center text-2xl font-medium">BUG LIST</h2>
+        <table className="table-auto mx-auto">
+          <thead>
             <tr className="bg-gray-300">
-                <th className="px-4 py-2">ID</th>
-                <th className="px-4 py-2">Description</th>
-                <th className="px-4 py-2">Status</th>
+              <th className="px-4 py-2">ID</th>
+              <th className="px-4 py-2">Description</th>
+              <th className="px-4 py-2">Status</th>
             </tr>
-        </thead>
-        <tbody>
+          </thead>
+          <tbody>
             {mockProjectDetailData.map((item) => {
-                return (
-                    <tr className="border-b border-gray-300 hover:bg-gray-200">
-                        <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.bugId}</td>
-                        <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.description}</td>
-                        <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.status}</td>
-                    </tr>
-                );
+              return (
+                <tr className="border-b border-gray-300 hover:bg-gray-200">
+                  <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.bugId}</td>
+                  <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.description}</td>
+                  <td className="px-4 py-2 text-lg font-medium text-gray-800">{item.status}</td>
+                </tr>
+              );
             })}
-        </tbody>
-    </table>
-  </div>
-</div>
+          </tbody>
+        </table>
+      </div>
+    </div>
 
   );
 };
