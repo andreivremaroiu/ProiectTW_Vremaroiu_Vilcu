@@ -11,7 +11,8 @@ const AddBug = () => {
     return error;
   };
 
-  let listOfProjects = useSelector((state) => state.bugs.projectList);
+  //let listOfProjects = useSelector((state) => state.bugs.projectList);
+  let listOfProjects = [1, 2, 3]
 
   const dispatch = useDispatch();
   const onLoad = () => {
@@ -54,9 +55,11 @@ const AddBug = () => {
                   className="shadow appearance-none border rounded w-full bg-gray-200 py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline"
                 >
                   <option value="">Select Project</option>
-                  {listOfProjects.map((value) => (
+                  {/* {listOfProjects.map((value) => (
                     <option key={'project' + value.id} value={value.id}>
-                      {value.name}
+                      {value.name} */}
+                      {listOfProjects.forEach(project => (
+                        <option value=""> {project}
                     </option>
                   ))}
                 </Field>
@@ -108,14 +111,19 @@ const AddBug = () => {
                 >
                   <option value="">Select a User</option>
 
-                  {listOfProjects.map(
+                  {/* {listOfProjects.map(
                     (value) =>
                       `<option
                           key= "owner${+value.owner}"
                           value=${value.owner}>
                           ${value.owner}
                         </option>`
-                  )}
+                  )} */}
+                  {
+                    listOfProjects.forEach(project => (
+                      <option value="">{project}</option>
+                    ))
+                  }
                 </Field>
 
                 {/* <option
