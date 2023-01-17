@@ -7,7 +7,9 @@ const router = express.Router();
 //getting the status for all bugs existent
 router.get('/getAllStatus', 
 bugsController.getAllStatus,
-(req, res) => res.status(200).json(res.locals.data));
+(req, response) => response.status(200).json(res.locals.data));
+
+
 
 //getting all the bugs
 router.get('/getAllBugs',
